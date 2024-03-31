@@ -9,6 +9,13 @@ const Login = (props) => {
   const onButtonClick = () => {
     setEmailError('')
     setPasswordError('')
+    if (email === ''){
+      setEmailError('Ingresar un correo electrónico.')
+      return
+    }
+    if (password === ''){
+      setPasswordError('Ingrese una contraseña.')
+    }
   }
 
   return (
