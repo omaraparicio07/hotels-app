@@ -25,6 +25,11 @@ const Login = (props) => {
       setPasswordError('La contraseña debe tener una longitud minima de 8 caracteres.')
       return
     }
+    if(!/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+){7,}$/.test(password)){
+      setPasswordError('La contraseña debe tener al menos una mayúscula, una minúscula y un numero')
+      return
+    }
+
   }
 
   return (
