@@ -13,8 +13,17 @@ const Login = (props) => {
       setEmailError('Ingresar un correo electrónico.')
       return
     }
+    if(!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email) ){
+      setEmailError('Debes ingresar un correo electrínico valido.')
+      return
+    }
+
     if (password === ''){
       setPasswordError('Ingrese una contraseña.')
+    }
+    if( password.length < 7 ){
+      setPasswordError('La contraseña debe tener una longitud minima de 8 caracteres.')
+      return
     }
   }
 
