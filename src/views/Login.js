@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 const Login = (props) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const emailError = ''
-  const passwordError = ''
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
 
   const onButtonClick = () => {
-    // You'll update this function later...
+    setEmailError('')
+    setPasswordError('')
   }
 
   return (
